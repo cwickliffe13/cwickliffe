@@ -1,0 +1,40 @@
+Dali Wang (Department of Electric Engineering and Computer Science, University of Tennessee, Knoxville, USA)
+Zi Wang (Environmental Science Division, Oak Ridge National Laboratory, Oak Ridge, USA)
+Xiapeng Zhao (Department of Mechanical, Aerospace and Biomedical Engineering, University of Tennessee, Knoxville, USA)
+Zhirong Bao (Developmental Biology Program, Memorial Sloan Kettering Cancer Center, NYC, USA)
+
+An Observation Data Driven Simulation and Analysis Framework for Early Stage C. elegans Embryogenesis
+
+The Advantages of Caenorhabditis elegans as a Developmental Biology Model 
+	The fields of microscopy, image analysis, and developmental biology typically use the Caenorhabditis elegans (C. elegans) as a model organism due to its unique neural system, invariant somatic cell lineage, and transparent and multicellular physicality. C. elegans embryos have the capacity to develop from 1 to 558 cells within 13 hours, and are easily detectable using a microscope given their size. The rapid reproduction of C. elegans cells within a limited timeframe facilitates the tracking of developmental stages of embryogenesis. Previous studies have identified algorithms and systems to track single C. elegans cells during the early embryogenesis process. For example, the algorithmic system Worm-GUIDES facilitates lineage analyses of wild-type C. elegans embryos and gene mutation developments in cells. Worm-GUIDES can help visualize the complete neural connectivity of C. elegans. 
+
+Research Importance
+	The authors developed an agent based framework using 3D time-lapse images to model the behavior of  C. elegans cells during embryogenesis (i.e. cell fate, division, and movement). Wang et al. suggest that the model can automatically predict individual cell dynamics and simulate cell behaviors. The research is important to predict dynamics for mechanical systems and apply these modelling approaches to more complex living systems such as humans.
+
+The authors summarize C. elegans models to support their new framework:
+1.	The Agent Based Modeling Frameworks 
+The authors discuss the use of agent based modeling to study embryogenesis. Individual cell can be modeled as an agent that contains a variety of information on its fate, size, division time, and group information. For an early stage C. elegans simulation, the cell fate, division, and movement can be directly derived from predefined observation datasets or represented by mathematical models. 
+2.	Modelling Approach 
+Wang et al. developed efficient algorithms to automatically trace every single wild-type C. elegans cell over the course of early embryogenesis using 3D time-lapseimaging. Specifically, the authors tracked the movements of Cpaa cells using observations and simulations with 3D imaging.
+
+1.	Cell Fate Model: The fate of each individual cell was predetermined by the 3D time-lapse image dataset. 
+2.	Cell Division Model: The authors developed a model for the division of cells based on the strongest polarity in the dividing cell, the composition of the cell and the eggshell and the force between the two. Three directions of the cell division were represented in the model against the observed division direction including a vector for the dominant polarity, pressure from cell to cell, and pressure between the egg and the eggshell. 
+ 
+3.	Cell Movement: Using 3D imaging directly, the authors developed a model to track single cellular movement in embryogenesis in addition to processes such as cell structure restoration and the formation of neural connections. 
+
+Results/Discussion
+The authors found that the 3D time-lapse imaging simulation was congruent with the observed movements of the Cpaa cell based on the distance to the embryo center along the AP axis. The authors discuss including these preliminary results into their modelling framework. 
+
+Future Directions for Modelling Framework
+
+1.	Cell Fate Representation Model
+a.	Ongoing work, the authors use 3D time-lapse imaging to trace cell lineage and tissue specific markers in a model to determine cell fate differentiation and how genes and gene networks shape the regulatory landscape and drive cells through the different trajectories of differentiation. This kind of developmental landscape then can be incorporated into our modeling framework to predict the cell fate under specific gene manipulation cases.
+
+2.	Equilibrium Model for Cell Division: 
+a.	The authors currently are working on a simplified model in agent based modeling framework to track mechanical interactions between C. elegans individual cells and the movement and genesis of new cells. The model assumes that individuals cells are a part of a network and connected to one another through springs. In this network is a quasi-equilibrium that is broken when a new cell is born, and a new equilibrium is produced. The goal of this study is for the authors to calculate the potential energies of the cell-spring network to determine the positions of the cell and consequential migration patterns. 
+
+3.	Multiagent Cell Movement Simulation
+a.	Embryogenesis in C. elegans is highly regulated and can be modelled using deep machine reinforcement. Similar to how the biological pattern of Rosette in Cpaa cell migration, the authors intend to create a deep reinforcement learning cell movement model based on four subgoals. The result would be a sequential migration path for Cpaa cells and special neighboring sub-goal cells. 
+
+Conclusion and Relevance to Emergent.Bio
+This paper indicates that C. elegans embryogenesis is highly regulatory and has the potential for deep reinforcement modeling based on previous success of 3D time-lapse imagining studies and can assist in predicting cell migration. The approach found in this paper can provide a basis for understanding the dynamics of individual cells and simulation-based hypothesis testing.  
